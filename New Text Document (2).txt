@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Tahoma", "Arial", sans-serif;
+    background-color: #f4efe6;
+    color: #3d3428;
+    line-height: 1.8;
+}
+
+
+.video-section {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(42, 35, 25, 0.45);
+}
+
+.video-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.video-content h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.video-content p {
+    font-size: 24px;
+}
+
+/* Two Paragraphs */
+.information {
+    display: flex;
+    width: 100%;
+}
+
+.paragraph {
+    width: 50%;
+    min-height: 230px;
+    padding: 35px 45px;
+}
+
+.first {
+    background-color: #777777;
+    color: white;
+}
+
+
+.second {
+    background-color: #556B2F;
+    color: white;
+}
+
+.paragraph h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.paragraph p {
+    text-align: right;
+    font-size: 16px;
+}
+
+.gallery {
+    background-color: #000000;
+    padding: 20px 6%;
+    min-height: 300px;
+}
+
+.gallery h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid #555;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
+
+
+footer {
+    background-color: #172A46;
+    border-top: 1px solid #333;
+    padding: 12px 25px;
+    text-align: center;
+    color: white;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 13px;
+    color: white;
+}
+
+
+@media (max-width: 700px) {
+    .information {
+        flex-direction: column;
+    }
+
+    .paragraph {
+        width: 100%;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
